@@ -30,5 +30,5 @@ A pixel-art style retro 2D game built with pure Java. This project is designed t
 Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/retro-2d-java-game.git
+git clone https://github.com/willgregorry/retro-2d-java-game.git
 cd retro-2d-java-game
