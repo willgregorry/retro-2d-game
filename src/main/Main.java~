@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main {
-    static Image icon = new ImageIcon("res/icon.png").getImage();
+    static Image icon = new ImageIcon("res/icons/favicon.png").getImage();
     public static void main(String[] args) {
         JFrame window = new JFrame("Retro 2D Game");
 
@@ -24,6 +24,7 @@ public class Main {
 
         window.setLocationRelativeTo(null);
 
+        gamePanel.setUpGame();
         gamePanel.startGameThread();
 
         window.setVisible(true);
