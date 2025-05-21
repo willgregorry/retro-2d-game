@@ -7,8 +7,10 @@ import java.awt.image.BufferedImage;
 
 public class LoadingPage extends JWindow {
 
+    GamePanel gp;
+
     public LoadingPage(String message) {
-        setSize(768, 576);
+        setSize(gp.screenWidth, gp.screenHeight);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel() {
@@ -24,12 +26,12 @@ public class LoadingPage extends JWindow {
         add(panel);
     }
 
-    public static void showLoading(String message, int durationMs) {
-        LoadingPage screen = new LoadingPage(message);
+    public static void showLoading(int durationMs) {
+        LoadingPage screen = new LoadingPage("Loading...");
         screen.setVisible(true);
 
         try {
-            Thread.sleep(durationMs);  // Blocks main thread (not recommended for production)
+            Thread.sleep(durationMs);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -48,7 +50,18 @@ public class LoadingPage extends JWindow {
             System.err.println("Failed to load splash image: " + e.getMessage());
         }
 
-        JPanel content = new JPanel();
+        BufferedImage finalLogoImage = logoImage;
+        JPanel content = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                if (finalLogoImage != null) {
+                    int x = (getWidth() - finalLogoImage.getWidth()) / 2;
+                    int y = (getHeight() - finalLogoImage.getHeight()) / 2;
+                    g.drawImage(finalLogoImage, x, y, this);
+                }
+            }
+        };
 
         content.setPreferredSize(new Dimension(768, 576));
         splash.add(content);

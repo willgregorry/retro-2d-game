@@ -24,12 +24,12 @@ public class LoadingPage extends JWindow {
         add(panel);
     }
 
-    public static void showLoading(String message, int durationMs) {
-        LoadingPage screen = new LoadingPage(message);
+    public static void showLoading(int durationMs) {
+        LoadingPage screen = new LoadingPage("Loading...");
         screen.setVisible(true);
 
         try {
-            Thread.sleep(durationMs);  // Blocks main thread (not recommended for production)
+            Thread.sleep(durationMs);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

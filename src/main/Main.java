@@ -8,7 +8,7 @@ public class Main {
 
         LoadingPage.showSplash(5000);
 
-        LoadingPage.showLoading("Loading...", 3000);
+        LoadingPage.showLoading(3000);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
