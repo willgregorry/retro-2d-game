@@ -5,9 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class LoadingPage extends JWindow {
+public class Pages extends JWindow {
 
-    public LoadingPage(String message) {
+    public Pages(String message) {
         setSize(768, 576);
         setLocationRelativeTo(null);
 
@@ -25,7 +25,7 @@ public class LoadingPage extends JWindow {
     }
 
     public static void showLoading(int durationMs) {
-        LoadingPage screen = new LoadingPage("Loading...");
+        Pages screen = new Pages("Loading...");
         screen.setVisible(true);
 
         try {
@@ -43,7 +43,7 @@ public class LoadingPage extends JWindow {
 
         BufferedImage logoImage = null;
         try {
-            logoImage = ImageIO.read(LoadingPage.class.getResourceAsStream("/intros/Multimedia4.png"));
+            logoImage = ImageIO.read(Pages.class.getResourceAsStream("/intros/Multimedia4.png"));
         } catch (Exception e) {
             System.err.println("Failed to load splash image: " + e.getMessage());
         }
