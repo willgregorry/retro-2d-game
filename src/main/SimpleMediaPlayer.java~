@@ -1,0 +1,55 @@
+package main;
+
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+public class SimpleMediaPlayer {
+
+    private static final String VIDEO_PATH = "D://Code/5th Project - Retro 2D Game with Java/Retro 2D Game/res/intros/Multimedia_Intro.mp4";
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Swing + JavaFX Video Player");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(800, 800);
+
+            JFXPanel fxPanel = new JFXPanel(); // bridge between Swing and JavaFX
+            frame.add(fxPanel, BorderLayout.CENTER);
+            frame.setVisible(true);
+
+            // Initialize JavaFX scene
+            Platform.runLater(() -> initFX(fxPanel));
+        });
+    }
+
+    private static void initFX(JFXPanel fxPanel) {
+        File file = new File(VIDEO_PATH);
+        if (!file.exists()) {
+            System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
+            return;
+        }
+
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer player = new MediaPlayer(media);
+        MediaView view = new MediaView(player);
+
+        view.setFitHeight(800);
+        view.setFitWidth(800);
+
+        Group root = new Group(view);
+        Scene scene = new Scene(root);
+
+        fxPanel.setScene(scene);
+        player.play();
+    }
+
+}

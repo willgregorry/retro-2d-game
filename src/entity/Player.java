@@ -23,15 +23,15 @@ public class Player extends Entity {
         screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
         screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
 
-        solidArea = new Rectangle(8, 16, 32, 32);
+        solidArea = new Rectangle(8, 16, 32, 30);
 
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 10;
-        worldY = gp.tileSize * 25;
+        worldX = gp.tileSize * 18;
+        worldY = gp.tileSize * 12;
         speed = 2;
         direction = "down";
     }

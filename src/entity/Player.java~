@@ -23,15 +23,15 @@ public class Player extends Entity {
         screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
         screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
 
-        solidArea = new Rectangle(8, 16, 32, 32);
+        solidArea = new Rectangle(8, 16, 32, 30);
 
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 10;
-        worldY = gp.tileSize * 25;
+        worldX = gp.tileSize * 18;
+        worldY = gp.tileSize * 12;
         speed = 2;
         direction = "down";
     }
@@ -73,18 +73,10 @@ public class Player extends Entity {
 
             if (!collisionOn) {
                 switch (direction) {
-                    case "up":
-                        worldY -= speed;
-                        break;
-                    case "down":
-                        worldY += speed;
-                        break;
-                    case "left":
-                        worldX -= speed;
-                        break;
-                    case "right":
-                        worldX += speed;
-                        break;
+                    case "up": worldY -= speed; break;
+                    case "down": worldY += speed; break;
+                    case "left": worldX -= speed; break;
+                    case "right": worldX += speed; break;
                 }
             }
 
@@ -139,8 +131,20 @@ public class Player extends Entity {
                 break;
         }
 
+        Rectangle rect = getCollision();
+
+        // Set color with transparency
+        g2.setColor(new Color(255, 0, 0, 100)); // semi-transparent red
+        g2.fill(rect);
+
+        // Draw the rectangle border
+        g2.setColor(Color.RED);
+        g2.drawImage(rect, screenX, screenY, gp.tileSize, gp.tileSize, null);
+
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
 
     }
+
+    public Rectangle getCollision() { return this.solidArea; }
 
 }

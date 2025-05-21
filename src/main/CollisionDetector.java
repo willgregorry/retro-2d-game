@@ -35,7 +35,7 @@ public class CollisionDetector {
 
                 break;
             case "down":
-                entityBottomRow = (entityBottomWorldY - entity.speed) / gp.tileSize;
+                entityBottomRow = (entityBottomWorldY + entity.speed) / gp.tileSize;
                 tileNum1 = gp.tileManager.mapTileNumber[entityLeftCol][entityBottomRow];
                 tileNum2 = gp.tileManager.mapTileNumber[entityRightCol][entityBottomRow];
 
@@ -55,7 +55,7 @@ public class CollisionDetector {
 
                 break;
             case "right":
-                entityRightCol = (entityRightWorldX - entity.speed) / gp.tileSize;
+                entityRightCol = (entityRightWorldX + entity.speed) / gp.tileSize;
                 tileNum1 = gp.tileManager.mapTileNumber[entityRightCol][entityTopRow];
                 tileNum2 = gp.tileManager.mapTileNumber[entityRightCol][entityBottomRow];
 
