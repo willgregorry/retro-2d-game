@@ -1,8 +1,10 @@
 package main;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
+    static Image icon = new ImageIcon("res/icons/favicon.png").getImage();
     public static void main(String[] args) {
         JFrame window = new JFrame("Retro 2D Game");
 
@@ -11,6 +13,7 @@ public class Main {
         Pages.showLoading(3000);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setIconImage(icon);
         window.setResizable(false);
         window.setUndecorated(true);
 

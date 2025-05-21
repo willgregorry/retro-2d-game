@@ -1,16 +1,19 @@
 package main;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
+    static Image icon = new ImageIcon("res/icon.png").getImage();
     public static void main(String[] args) {
         JFrame window = new JFrame("Retro 2D Game");
 
-        LoadingPage.showSplash(5000);
+        Pages.showSplash(5000);
 
-        LoadingPage.showLoading(3000);
+        Pages.showLoading(3000);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setIconImage(icon);
         window.setResizable(false);
         window.setUndecorated(true);
 
