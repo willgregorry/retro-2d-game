@@ -294,7 +294,7 @@ public class TileManager {
             // Water
             tile[41] = new Tile();
             tile[41].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water_grass/water.png"));
-            tile[41].collision = false;
+            tile[41].collision = true;
 
             // Water Grass right
             tile[42] = new Tile();
