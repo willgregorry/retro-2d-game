@@ -8,9 +8,11 @@ public class Main {
     public static void main(String[] args) {
         JFrame window = new JFrame("Retro 2D Game");
 
-//        Pages.showSplash(5000);
-//
-//        Pages.showLoading(3000);
+        GamePanel gp = new GamePanel();
+        gp.playSfx(1);
+        Pages.showSplash(5500);
+
+        Pages.showLoading(3000);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setIconImage(icon);

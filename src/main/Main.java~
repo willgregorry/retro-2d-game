@@ -6,34 +6,30 @@ import java.awt.*;
 public class Main {
     static Image icon = new ImageIcon("res/icons/favicon.png").getImage();
     public static void main(String[] args) {
+        JFrame window = new JFrame("Retro 2D Game");
 
-        for (int i = 0; i < 10; i++) {
-            String[] splits = "41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41".split(" ");
-            System.out.println(splits.length);
-        }
+        GamePanel gp = new GamePanel();
+        gp.playSfx(1);
+        Pages.showSplash(55a00);
 
-//        JFrame window = new JFrame("Retro 2D Game");
-//
-////        Pages.showSplash(5000);
-////
-////        Pages.showLoading(3000);
-//
-//        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        window.setIconImage(icon);
-//        window.setResizable(false);
-//        window.setUndecorated(true);
-//
-//        GamePanel gamePanel = new GamePanel();
-//        window.add(gamePanel);
-//
-//        window.pack();
-//
-//        window.setLocationRelativeTo(null);
-//
-//        gamePanel.setUpGame();
-//        gamePanel.startGameThread();
-//
-//        window.setVisible(true);
+        Pages.showLoading(3000);
+
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setIconImage(icon);
+        window.setResizable(false);
+        window.setUndecorated(true);
+
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+
+        window.pack();
+
+        window.setLocationRelativeTo(null);
+
+        gamePanel.setUpGame();
+        gamePanel.startGameThread();
+
+        window.setVisible(true);
 
 
     }

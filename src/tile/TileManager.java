@@ -89,22 +89,22 @@ public class TileManager {
             // Grass dirt left top
             tile[0] = new Tile();
             tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_left_top.png"));
-            tile[0].collision = false;
+            tile[0].collision = true;
 
             // Grass dirt top
             tile[1] = new Tile();
             tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_top.png"));
-            tile[1].collision = false;
+            tile[1].collision = true;
 
             // Grass dirt right top
             tile[2] = new Tile();
             tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_right_top.png"));
-            tile[2].collision = false;
+            tile[2].collision = true;
 
             // Grass dirt left
             tile[3] = new Tile();
             tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_left.png"));
-            tile[3].collision = false;
+            tile[3].collision = true;
 
             // Grass
             tile[4] = new Tile();
@@ -114,42 +114,42 @@ public class TileManager {
             // Grass dirt right
             tile[5] = new Tile();
             tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_right.png"));
-            tile[5].collision = false;
+            tile[5].collision = true;
 
             // Grass dirt left bottom
             tile[6] = new Tile();
             tile[6].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_left_bottom.png"));
-            tile[6].collision = false;
+            tile[6].collision = true;
 
             // Grass dirt bottom
             tile[7] = new Tile();
             tile[7].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_bottom.png"));
-            tile[7].collision = false;
+            tile[7].collision = true;
 
             // Grass dirt right bottom
             tile[8] = new Tile();
             tile[8].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_right_bottom.png"));
-            tile[8].collision = false;
+            tile[8].collision = true;
 
             // Grass dirt top left corner
             tile[9] = new Tile();
             tile[9].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_left_top_corner.png"));
-            tile[9].collision = false;
+            tile[9].collision = true;
 
             // Grass dirt top right corner
             tile[10] = new Tile();
             tile[10].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_right_top_corner.png"));
-            tile[10].collision = false;
+            tile[10].collision = true;
 
             // Grass dirt bottom left corner
             tile[11] = new Tile();
             tile[11].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_left_bottom_corner.png"));
-            tile[11].collision = false;
+            tile[11].collision = true;
 
             // Grass dirt bottom right corner
             tile[12] = new Tile();
             tile[12].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass_dirt/grass_dirt_right_bottom_corner.png"));
-            tile[12].collision = false;
+            tile[12].collision = true;
 
             // Grass decoration 1
             tile[13] = new Tile();
@@ -164,22 +164,22 @@ public class TileManager {
             // Sand water left top
             tile[15] = new Tile();
             tile[15].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_left_top.png"));
-            tile[15].collision = false;
+            tile[15].collision = true;
 
             // Sand water top
             tile[16] = new Tile();
             tile[16].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_top.png"));
-            tile[16].collision = false;
+            tile[16].collision = true;
 
             // Sand water right top
             tile[17] = new Tile();
             tile[17].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_right_top.png"));
-            tile[17].collision = false;
+            tile[17].collision = true;
 
             // Sand water left
             tile[18] = new Tile();
             tile[18].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_left.png"));
-            tile[18].collision = false;
+            tile[18].collision = true;
 
             // Sand
             tile[19] = new Tile();
@@ -189,42 +189,42 @@ public class TileManager {
             // Sand water right
             tile[20] = new Tile();
             tile[20].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_right.png"));
-            tile[20].collision = false;
+            tile[20].collision = true;
 
             // Sand water left bottom
             tile[21] = new Tile();
             tile[21].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_left_bottom.png"));
-            tile[21].collision = false;
+            tile[21].collision = true;
 
             // Sand water bottom
             tile[22] = new Tile();
             tile[22].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_bottom.png"));
-            tile[22].collision = false;
+            tile[22].collision = true;
 
             // Sand water right bottom
             tile[23] = new Tile();
             tile[23].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_right_bottom.png"));
-            tile[23].collision = false;
+            tile[23].collision = true;
 
             // Sand water top left corner
             tile[24] = new Tile();
             tile[24].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_left_top_corner.png"));
-            tile[24].collision = false;
+            tile[24].collision = true;
 
             // Sand water top right corner
             tile[25] = new Tile();
             tile[25].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_right_top_corner.png"));
-            tile[25].collision = false;
+            tile[25].collision = true;
 
             // Sand water bottom left corner
             tile[26] = new Tile();
             tile[26].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_left_bottom_corner.png"));
-            tile[26].collision = false;
+            tile[26].collision = true;
 
             // Sand water bottom right corner
             tile[27] = new Tile();
             tile[27].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand_water/sand_water_right_bottom_corner.png"));
-            tile[27].collision = false;
+            tile[27].collision = true;
 
             // Dirt sand left top
             tile[28] = new Tile();
