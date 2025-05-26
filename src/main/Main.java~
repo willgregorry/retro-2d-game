@@ -5,12 +5,12 @@ import java.awt.*;
 
 public class Main {
     static Image icon = new ImageIcon("res/icons/favicon.png").getImage();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         JFrame window = new JFrame("Retro 2D Game");
 
         GamePanel gp = new GamePanel();
         gp.playSfx(1);
-        Pages.showSplash(55a00);
+        Pages.showSplash(5500);
 
         Pages.showLoading(3000);
 

@@ -12,7 +12,7 @@ public class Sound {
 
     public Sound() {
         // Background Music
-        soundUrl[0] = getClass().getResource("/sounds/bgm/bgm.wav");
+        soundUrl[0] = getClass().getResource("/sounds/bgm/pokemanan_bgm.wav");
         soundUrl[1] = getClass().getResource("/sounds/bgm/multimedia4.wav");
 
         // SFX
